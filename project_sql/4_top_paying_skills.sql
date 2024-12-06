@@ -7,7 +7,7 @@
 
 SELECT
     skills_dim.skills,
-    ROUND(AVG(job_postings_fact.salary_year_avg), 2) AS avg_salary_per_skill,
+    ROUND(AVG(job_postings_fact.salary_year_avg), 2) AS avg_salary_per_skill
 FROM     
     job_postings_fact
 INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
